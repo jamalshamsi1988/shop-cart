@@ -1,10 +1,11 @@
-
+import ProductsContexProvider from "./contex/ProductsContexProvider";
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+  <ProductsContexProvider>
+
+  </ProductsContexProvider>
+  
   );
 }
 
