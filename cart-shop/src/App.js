@@ -10,8 +10,10 @@ function App() {
 
   <ProductsContexProvider>
  <Routes>
-  <Route path="/store" element={<Store/>} />
-  <Route path="/productsdetail" element={<ProductsDetail/>} />
+  <Route path="/products" element={<Store/>} />
+  <Route path="/products/:id" element={<ProductsDetail/>} />
+  <Route path="/*" element={<Navigate to="/products"/>} />
+
  </Routes>
 
   </ProductsContexProvider>
