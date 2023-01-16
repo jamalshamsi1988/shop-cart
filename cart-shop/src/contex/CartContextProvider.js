@@ -25,7 +25,8 @@ const cartReducer=(state , action)=>{
             })
             return {
                 ...state , selectedItems:[...state.selectedItems] ,
-                ...sumItems(state.selectedItems)
+                ...sumItems(state.selectedItems),
+                checkOut:false
             }
                 
             }
@@ -34,7 +35,7 @@ const cartReducer=(state , action)=>{
         const newSelectedItems=state.selectedItems.filter(item => item.id !==action.payload.id)
         return {
             ...state , selectedItems:[...newSelectedItems] ,
-            ...sumItems(state.selectedItems)
+            ...sumItems(newSelectedItems)
         }
 
      case "INCREASE" :
