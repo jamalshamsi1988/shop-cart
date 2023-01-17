@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 150px 175px 50px;
+    transition: all 0.2s ease;
+
+}
+.cartContainer{
+    width: 70px;
+}
