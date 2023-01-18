@@ -20,10 +20,10 @@ const CartShop = () => {
      {
       state.itemsCounter > 0 && <div className={styles.payments}>
         <p><span>Total Items :</span>{state.itemsCounter}</p>
-        <p><span>Total Payment :</span>{state.total}</p>
+        <p><span>Total Payment :</span>{state.total} $</p>
         <div className={styles.buttonContainer}>
-          <button className={styles.clear} onClick={()=> dispatch({type:"CHECKOUT"})}>Check Out</button>
-          <button className={styles.checkout} onClick={()=> dispatch({type:"CLEAR"})}>Clear</button>
+          <button className={styles.checkout} onClick={()=> dispatch({type:"CHECKOUT"})}>Check Out</button>
+          <button className={styles.clear} onClick={()=> dispatch({type:"CLEAR"})}>Clear</button>
         </div>
       </div>
 
@@ -39,7 +39,7 @@ const CartShop = () => {
      {
        !state.checkOut && state.itemsCounter === 0 && <div className={styles.complete}>
        <h3>Want to Buy More?</h3>
-       <Link to="/products">Go back to shop</Link>
+       <Link to="/products">Go to shop</Link>
      </div>
      }
     </div>

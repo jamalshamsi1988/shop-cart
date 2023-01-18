@@ -6,6 +6,8 @@ import { shorten } from '../../helper/functions';
 import { cartContext } from './../../contex/CartContextProvider';
 //icons
 import trashIcon from '../../assets/Icons/trash.svg';
+//css
+import styles from '../shared/Cart.module.css';
 
 const Cart = (props) => {
     
@@ -13,16 +15,16 @@ const Cart = (props) => {
     const {image , title , price , quantity}=props.data;
 
   return (
-    <div>
-      <div>
-        <img src={image} alt="product"/>
-      </div>
-      <div>
+    <div className={styles.container}>
+        <img  className={styles.productImage} src={image} alt="product"/>
+      <div className={styles.data}>
         <h3>{shorten(title)}</h3>
         <p>{price} $</p>
       </div>
-      <div>{quantity}</div>
-      <div>
+
+      <div><span className={styles.quantity}>{quantity}</span></div>
+
+      <div className={styles.buttonContainer}> 
         {
         quantity > 1 ? <button onClick={()=> dispatch({type:"DECREASE" , payload:props.data})}>-</button> :
          <button onClick={()=> dispatch({type:"REMOVE_ITEM" , payload:props.data})}>
