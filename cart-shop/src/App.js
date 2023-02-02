@@ -12,6 +12,7 @@ import Login from "./components/Login";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import NotFound from "./components/NotFound";
+import Search from "./components/Search";
 
 
 function App() {
@@ -20,16 +21,17 @@ function App() {
   <ProductsContexProvider>
     <CartContextProvider>
       <Navbar />
+      <Search />
         <Routes>
           <Route path="/products" element={<Store/>} />
           <Route path="/products/:id" element={<ProductsDetail/>} />
           <Route path="/cart" element={<CartShop />} />
-          {/* <Route path="/*" element={<Navigate to="/products"/>} /> */}
+          <Route path="/*" element={<Navigate to="/products"/>} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/aboutus" element={<AboutUs/>} />
           <Route path='/notfound' element={<NotFound/>} />
-          <Route path="/*" element={<Navigate to="/notfound"/>} />
+          {/* <Route path="/*" element={<Navigate to="/notfound"/>} /> */}
          </Routes>
          <Footer/>
       </CartContextProvider>

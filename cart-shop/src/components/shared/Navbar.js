@@ -10,6 +10,7 @@ import shopIcon from '../../assets/Icons/shop.svg';
 //css
 import styles from '../shared/Navbar.module.css';
 
+
 const Navbar = () => {
 
     const {state} = useContext(cartContext);
