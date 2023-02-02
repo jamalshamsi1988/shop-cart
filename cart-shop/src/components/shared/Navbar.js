@@ -15,17 +15,18 @@ const Navbar = () => {
     const {state} = useContext(cartContext);
   return (
     <div className={styles.mainContainer}>
+      
       <div className={styles.container}>
         <Link className={styles.productLink} to="/products">Products</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">SignUp</Link>
-        <Link to="/aboutus">About Us</Link>
+        <Link   className={styles.productLink}to="/login">Login</Link>
+        <Link className={styles.productLink} to="/signup">SignUp</Link>
+        <Link  className={styles.productLink}to="/aboutus">About Us</Link>
+        </div>
            <div className={styles.iconContainer}>
         <Link to="/cart"><img src={shopIcon} alt="shop"/></Link>
         <span>{state.itemsCounter}</span>
-        
       </div>
-      </div>
+      
     </div>
   )
 }

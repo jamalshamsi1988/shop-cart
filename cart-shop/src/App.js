@@ -29,7 +29,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/aboutus" element={<AboutUs/>} />
           <Route path='/notfound' element={<NotFound/>} />
-          <Route path='/*' element={ <Navigate to="/notfound"/>} />
+          <Route path="/*" element={<Navigate to="/notfound"/>} />
          </Routes>
          <Footer/>
       </CartContextProvider>
