@@ -7,6 +7,21 @@
    padding: 0 150px;
 
 }
+.inputContainer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 100px ;
+}
+.input{
+    height: 20px;
+    width: 300px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    padding: 5px;
+    transition: all 0.2s ease;
+}
 @media (max-width : 1200px){
     .container{
         margin-top: 110px;

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 //functions
 import { shorten ,isInCart , quantityCount} from '../../helper/functions';
 
+
 //Context
 import { cartContext } from '../../contex/CartContextProvider';
 
@@ -17,7 +18,9 @@ import styles from '../shared/Product.module.css';
 const Product = ({productData}) => {
 
   const {state , dispatch}=useContext(cartContext);
+ 
   return (
+   
     <div className={styles.container}>
       <img className={styles.cardImage} src={productData.image} alt="product" />
       <h3>{shorten(productData.title)}</h3>
@@ -38,6 +41,7 @@ const Product = ({productData}) => {
         </div>
       </div>
     </div>
+   
   )
 }
 

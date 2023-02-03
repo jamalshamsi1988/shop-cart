@@ -12,7 +12,6 @@ import Login from "./components/Login";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import NotFound from "./components/NotFound";
-import Search from "./components/Search";
 
 
 function App() {
@@ -21,7 +20,7 @@ function App() {
   <ProductsContexProvider>
     <CartContextProvider>
       <Navbar />
-      <Search />
+      
         <Routes>
           <Route path="/products" element={<Store/>} />
           <Route path="/products/:id" element={<ProductsDetail/>} />
