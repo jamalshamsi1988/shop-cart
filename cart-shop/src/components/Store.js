@@ -1,9 +1,7 @@
 import React,{useContext,useState,useEffect} from 'react';
-import { getProducts } from '../services/api';
-
 //component
 import Product from './shared/Product';
-import Cart from './shared/Cart';
+
 //context
 import {ProductsContext} from "../contex/ProductsContexProvider";
 //css 
@@ -18,14 +16,7 @@ const Store = ({props}) => {
     const [search , setSearch]=useState("");
     const[productsData,setProductsData]=useState([]);
   
-    useEffect(()=>{
-      const fetchAPI=async ()=>{
-        const data = await getProducts();
-        setProductsData(data);
-      }
-      fetchAPI();
-    },[]);
-  
+    useEffect(()=>setProductsData(products),[products]);
   const searchHandeler= event=>{
        setSearch(event.target.value);
   }
@@ -38,12 +29,9 @@ const Store = ({props}) => {
     </div>
     { search ?
       <div>
-        {searchProduct.map(product=><Cart
+        {searchProduct.map(product=><Product
          key={product.id} 
-         title={product.title}
-         category={product.category} 
-         description={product.description}
-         price={product.price}
+         productData={product}
          
          />)}
       </div>
