@@ -10,7 +10,7 @@ import styles from '../components/Store.module.css';
 
 
 
-const Store = ({props}) => {
+const Store = () => {
  
     const products=useContext(ProductsContext);
     const [search , setSearch]=useState("");
@@ -28,7 +28,7 @@ const Store = ({props}) => {
     <input className={styles.input} type='text' placeholder='Search' value={search} onChange={searchHandeler} />
     </div>
     { search ?
-      <div>
+      <div className={styles.container}>
         {searchProduct.map(product=><Product
          key={product.id} 
          productData={product}
