@@ -79,3 +79,13 @@ padding-right: 50px;
       padding: 15px 20px;
     }
   }
+  
+@media (max-width: 480px) {
+  .container {
+    padding-top:15px 10px;
+  }
+  .productLink{
+    padding-right: 15px;
+    font-size: smaller;
+  }
+}

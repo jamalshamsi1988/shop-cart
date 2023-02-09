@@ -4,6 +4,8 @@ import React from 'react';
 import myFoto from "../image/Jamal_Shamsi.jpg";
 //CSS
 import styles from "../components/AboutUs.module.css";
+//Icons
+import github from "../assets/Icons/github.svg"
 
 
 const AboutUs = () => {
@@ -16,7 +18,8 @@ const AboutUs = () => {
      
      <h3>Interested in Web development, especially enjoys working with teams.
         wants to learn new things about Web and it's around. Always have an energetic personality in work.
-        </h3>
+        </h3>  
+<img className={styles.icon} src={github} />
 </div>
     </div>
   )
