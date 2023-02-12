@@ -5,8 +5,12 @@ import myFoto from "../image/Jamal_Shamsi.jpg";
 //CSS
 import styles from "../components/AboutUs.module.css";
 //Icons
-import github from "../assets/Icons/github.svg"
+import github from "../assets/Icons/github.svg";
+import linkedin from "../assets/Icons/linkedin.svg";
 
+
+const githubLink="https://github.com/jamalshamsi1988";
+const linkedinLink="https://www.linkedin.com/in/jamal-shamsi-86553a225/";
 
 const AboutUs = () => {
   return (
@@ -18,9 +22,13 @@ const AboutUs = () => {
      
      <h3>Interested in Web development, especially enjoys working with teams.
         wants to learn new things about Web and it's around. Always have an energetic personality in work.
-        </h3>  
-<img className={styles.icon} src={github} />
+        </h3> 
 </div>
+        <div className={styles.icons} >
+          <a href={githubLink}><img className={styles.icon} src={github} alt="github" /></a>
+          <a href={linkedinLink}><img className={styles.icon}src={linkedin} alt="linkedin"/></a>
+          </div> 
+        
     </div>
   )
 }

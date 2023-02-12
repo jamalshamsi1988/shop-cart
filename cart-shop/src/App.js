@@ -31,6 +31,7 @@ function App() {
           <Route path="/aboutus" element={<AboutUs/>} />
           <Route path='/notfound' element={<NotFound/>} />
           {/* <Route path="/*" element={<Navigate to="/notfound"/>} /> */}
+          <Route path="/github" element={<AboutUs />} />
          </Routes>
          <Footer/>
       </CartContextProvider>
