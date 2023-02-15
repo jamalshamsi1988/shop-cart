@@ -16,7 +16,9 @@ const Store = () => {
     const [search , setSearch]=useState("");
     const[productsData,setProductsData]=useState([]);
   
-    useEffect(()=>setProductsData(products),[products]);
+    useEffect(()=>
+    setProductsData(products),
+    [products]);
   const searchHandeler= event=>{
        setSearch(event.target.value);
   }
