@@ -14,6 +14,7 @@ import styles from '../shared/Navbar.module.css';
 const Navbar = () => {
 
     const {state} = useContext(cartContext);
+    
   return (
     <div className={styles.mainContainer}>
       
