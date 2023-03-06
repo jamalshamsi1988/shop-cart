@@ -7,7 +7,7 @@ import { shorten ,isInCart , quantityCount} from '../../helper/functions';
 
 
 //Context
-import { cartContext } from '../../contex/CartContextProvider';
+// import { cartContext } from '../../contex/CartContextProvider';
 
 //Icons
 import trashIcon from '../../assets/Icons/trash.svg';
@@ -17,7 +17,7 @@ import styles from '../shared/Product.module.css';
 
 const Product = ({productData}) => {
 
-  const {state , dispatch}=useContext(cartContext);
+  // const {state , dispatch}=useContext(cartContext);
  
   return (
    
@@ -28,7 +28,7 @@ const Product = ({productData}) => {
       <div className={styles.linkContainer}>
         <Link to={`/products/${productData.id}`}>Detailes</Link>
         <div className={styles.buttonContainer}>
-          {
+          {/* {
               quantityCount(state , productData.id) ===1  && <button className={styles.smallButton} onClick={()=>dispatch({type:"REMOVE_ITEM" , payload:productData})}><img src={trashIcon} alt="trash"/></button>
             }
              {quantityCount(state , productData.id) > 1 && <button className={styles.smallButton} onClick={()=> dispatch({type:"DECREASE" , payload:productData})}>-</button>} 
@@ -36,7 +36,7 @@ const Product = ({productData}) => {
        {
         isInCart(state ,productData.id) ? <button className={styles.smallButton} onClick={()=> dispatch({type :"INCREASE" , payload:productData})}>+</button>
         : <button onClick={()=> dispatch({type:"ADD_ITEM" , payload:productData})}>Add To Cart</button>
-       }
+       } */}
 
         </div>
       </div>
