@@ -10,6 +10,7 @@ import Product from './shared/Product';
 import styles from '../components/Store.module.css';
 
 import { fetchProducts } from '../redux/products/productAction';
+import Loader from './Loader';
 
 
 
@@ -19,7 +20,7 @@ const Store = () => {
  const productState=useSelector(state => state.productsState);
 
  useEffect(()=>{
-  dispatch(fetchProducts());
+ if(!productState.products.length) dispatch(fetchProducts());
  },[])
 
 
@@ -40,7 +41,7 @@ const Store = () => {
 
     {
       productState.loadin ?
-      <h2>Lodaing ...</h2> :
+      <Loader /> :
       productState.error ?
       <p>Something went wrong </p> :
       productState.products.map(product => <Product 
