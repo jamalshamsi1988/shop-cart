@@ -28,16 +28,16 @@ function App() {
           <Route path="/products" element={<Store/>} />
           <Route path="/*" element={<Navigate to="/products"/>} />
           <Route path="/products/:id" element={<ProductsDetail/>} />
-          {/* <Route path="/cart" element={<CartShop />} /> */}
+          <Route path="/cart" element={<CartShop />} />
           
-          {/* <Route path="/signup" element={<SignUp />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/aboutus" element={<AboutUs/>} />
-          <Route path='/notfound' element={<NotFound/>} /> */} 
-          {/* <Route path="/*" element={<Navigate to="/notfound"/>} />
-          <Route path="/github" element={<AboutUs />} /> */}
+          <Route path='/notfound' element={<NotFound/>} /> 
+           <Route path="/*" element={<Navigate to="/notfound"/>} />
+          <Route path="/github" element={<AboutUs />} />
          </Routes>
-         <Footer/>
+         <Footer/> 
          </Provider>
   //     </CartContextProvider>
   // </ProductsContexProvider>
