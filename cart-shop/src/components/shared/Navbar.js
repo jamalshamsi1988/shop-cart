@@ -1,10 +1,12 @@
-import React ,{ useContext }from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector  } from 'react-redux';
 //components
 import SignUp from '../SignUp';
 
 //context
-import { cartContext } from '../../contex/CartContextProvider';
+// import { cartContext } from '../../contex/CartContextProvider';
+
 //icons
 import shopIcon from '../../assets/Icons/shop.svg';
 //css
@@ -13,7 +15,8 @@ import styles from '../shared/Navbar.module.css';
 
 const Navbar = () => {
 
-    const {state} = useContext(cartContext);
+    // const {state} = useContext(cartContext);
+    const state = useSelector(state => state.cartState)
     
   return (
     <div className={styles.mainContainer}>
