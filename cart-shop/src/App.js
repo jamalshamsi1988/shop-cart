@@ -38,7 +38,7 @@ function App() {
           <Route path="/github" element={<AboutUs />} />
          </Routes>
          <Footer/> 
-         </Provider>
+     </Provider>
   //     </CartContextProvider>
   // </ProductsContexProvider>
   
