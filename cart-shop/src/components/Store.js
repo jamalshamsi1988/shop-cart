@@ -46,8 +46,7 @@ const Store = () => {
       <p>Something went wrong </p> :
       productState.products.map(product => <Product 
 
-        key={product.id}
-        productData={product}
+       
       />)
     }
 
